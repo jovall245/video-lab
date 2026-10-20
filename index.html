@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container py-4">
+    <!-- Email fields from the example page -->
+    <form id="emailForm" class="mb-5" novalidate>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="confirmEmail" class="form-label">Confirm email:</label>
+        <input type="email" class="form-control" id="confirmEmail" placeholder="Enter email" required>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Submit">
+      <p id="emailResult" class="result-message mt-2" role="status" aria-live="polite"></p>
+    </form>
+
+    <h1 class="mb-4">Pizza Hut Order Form</h1>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <form id="pizzaForm" novalidate>
+          <div class="mb-4" role="group" aria-label="Pizza size">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="small" value="Small">
+              <label class="form-check-label" for="small">Small</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="medium" value="Medium">
+              <label class="form-check-label" for="medium">Medium</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="large" value="Large">
+              <label class="form-check-label" for="large">Large</label>
+            </div>
+          </div>
+
+          <div class="mb-4" role="group" aria-label="Pizza toppings">
+            <div class="form-check">
+              <input class="form-check-input topping" type="checkbox" id="pepperoni" value="pepperoni">
+              <label class="form-check-label" for="pepperoni">pepperoni</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input topping" type="checkbox" id="sausage" value="sauage">
+              <label class="form-check-label" for="sausage">sauage</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input topping" type="checkbox" id="mushrooms" value="mushrooms">
+              <label class="form-check-label" for="mushrooms">mushrooms</label>
+            </div>
+          </div>
+
+          <input type="submit" class="btn btn-primary" value="Submit Order">
+          <p id="orderResult" class="result-message mt-2" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="col-md-6 d-flex justify-content-center">
+        <div id="pizzaPreview" class="pizza-preview" aria-label="Pizza preview">
+          <img src="https://nhinojosa.github.io/bootstrapform/images/cheese.png" alt="Cheese pizza" class="pizza-layer" id="cheeseImage">
+          <img src="https://nhinojosa.github.io/bootstrapform/images/pepperoni.png" alt="" class="pizza-layer topping-layer" id="pepperoniImage" hidden>
+          <img src="https://nhinojosa.github.io/bootstrapform/images/sausage.png" alt="" class="pizza-layer topping-layer" id="sausageImage" hidden>
+          <img src="https://nhinojosa.github.io/bootstrapform/images/mushrooms.png" alt="" class="pizza-layer topping-layer" id="mushroomsImage" hidden>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

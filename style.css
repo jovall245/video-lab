@@ -1,0 +1,44 @@
+/* Small custom additions to the Bootstrap form. */
+body {
+  background: #fff;
+}
+
+.pizza-preview {
+  position: relative;
+  width: 294px;
+  height: 294px;
+  max-width: 100%;
+  transition: transform 0.2s ease;
+  transform-origin: top center;
+}
+
+.pizza-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pizza-layer[hidden] {
+  display: none;
+}
+
+.result-message {
+  min-height: 1.5em;
+}
+
+.result-message.success {
+  color: #146c43;
+}
+
+.result-message.error {
+  color: #b02a37;
+}
+
+@media (max-width: 575px) {
+  .pizza-preview {
+    width: min(294px, 80vw);
+    height: min(294px, 80vw);
+  }
+}
